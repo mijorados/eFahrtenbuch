@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".NewTripActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_Start"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="@string/abfahrt2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/ET_StartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TV_Start"
+                android:layout_alignStart="@+id/TV_Start"
+                android:layout_alignEnd="@+id/TV_Start"
+                android:ems="10"
+                android:hint="@string/datum_tt_mm_yyyy"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/ET_StartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_Start"
+                android:layout_alignStart="@+id/TV_Start"
+                android:layout_below="@+id/ET_StartDate"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="@string/zeit_hh_mm"
+                android:inputType="time" />
+            <AutoCompleteTextView
+                android:id="@+id/ACTV_StartAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/TV_Start"
+                android:layout_alignStart="@id/TV_Start"
+                android:layout_below="@id/ET_StartTime"
+                android:layout_marginRight="65dp"
+                android:inputType="textNoSuggestions"
+                android:hint="@string/addresse_abfarht"/>
+
+            <ImageButton
+                android:id="@+id/BT_RetourTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ACTV_StartAddress"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignEnd="@id/TV_Start"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_renew_black_24dp" />
+            <ImageButton
+                android:id="@+id/BT_Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ACTV_StartAddress"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignEnd="@id/TV_Start"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_home_black_24dp" />
+            <ImageButton
+                android:id="@+id/BT_GPSLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ACTV_StartAddress"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="65dp"
+                android:layout_alignEnd="@id/TV_Start"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_gps_black_24dp" />
+
+            <EditText
+                android:id="@+id/ET_StartLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_Start"
+                android:layout_alignStart="@+id/TV_Start"
+                android:layout_below="@+id/ACTV_StartAddress"
+                android:ems="10"
+                android:hint="@string/ort_abfarht"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/ET_StartKm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_Start"
+                android:layout_alignStart="@+id/TV_Start"
+                android:layout_below="@+id/ET_StartLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/kilometerstand"
+                android:inputType="number" />
+            <ImageButton
+                android:id="@+id/BT_LastKm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ET_StartKm"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignEnd="@id/TV_Start"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_renew_black_24dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/ACTV_Note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/TV_Start"
+                android:layout_alignStart="@id/TV_Start"
+                android:layout_below="@id/ET_StartKm"
+                android:inputType="textNoSuggestions"
+                android:hint="@string/zweck"/>
+
+
+            <Switch
+                android:id="@+id/SW_Category"
+                android:layout_width="229dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ACTV_Note"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:ems="10"
+                android:text="@string/beruflich"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/BT_StartTrip"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/SW_Category"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:text="@string/fahrt_starten" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

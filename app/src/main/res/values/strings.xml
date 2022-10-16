@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Fahrtenbuch</string>
+    <string name="title_activity_main_fb">Fahrtenbuch</string>
+    <string-array name="categories_array">
+        <item>nur berufliche Fahrten</item>
+        <item>alle Fahrten</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="abfahrt">Abfahrt:</string>
+    <string name="ankunft">Ankunft</string>
+    <string name="datum_tt_mm_yyyy">Datum (tt/mm/yyyy)*</string>
+    <string name="zeit_hh_mm">Zeit (hh:mm)*</string>
+    <string name="addresse_ankunft">Addresse Ankunft*</string>
+    <string name="ort_ankunft">Ort Ankunft*</string>
+    <string name="kilometerstand">Kilometerstand*</string>
+    <string name="zweck">Zweck</string>
+    <string name="beruflich">Beruflich</string>
+    <string name="fahrt_beenden">Fahrt beenden</string>
+    <string name="ankunft2">Ankunft:</string>
+    <string name="fahrtinfo">Fahrtinfo</string>
+    <string name="fahrt_speichern">Fahrt speichern</string>
+    <string name="von_tt_mm_yyyy">Von (tt/mm/yyyy)*</string>
+    <string name="bis_tt_mm_yyyy">Bis (tt/mm/yyyy)*</string>
+    <string name="email">Email*</string>
+    <string name="daten_exportieren">Daten Exportieren</string>
+    <string name="abfahrt2">Abfahrt</string>
+    <string name="addresse_abfarht">Addresse Abfarht*</string>
+    <string name="ort_abfarht">Ort Abfarht*</string>
+    <string name="fahrt_starten">Fahrt starten</string>
+    <string name="grafik">Grafik</string>
+    <string name="export">Export</string>
+    <string name="einstellungen">Einstellungen</string>
+    <string name="FarhtenGrafik">Fahrten Grafik</string>
+    <string name="offenefahrt">Offene Fahrt</string>
+    <string name="aktivefahrt">Aktive Fahrt</string>
+    <string name="neuefahrt">Neue Fahrt starten</string>
+    <string name="info">Info</string>
+</resources>

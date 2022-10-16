@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:defaultValue="..."
+        android:key="export_email"
+        android:summary="Standard Email Adresse für Export"
+        android:title="Email"
+        android:inputType="textEmailAddress"/>
+    <EditTextPreference
+        android:defaultValue="..."
+        android:key="heimat_adresse"
+        android:summary="Adresse Heimatort"
+        android:title="Adresse"
+        android:inputType="text"/>
+    <EditTextPreference
+        android:defaultValue="..."
+        android:key="heimat_ort"
+        android:summary="Heimatort"
+        android:title="Ort"
+        android:inputType="text"/>
+</PreferenceScreen>

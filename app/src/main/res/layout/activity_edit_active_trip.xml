@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".EditActiveLogActivity">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_ActiveInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/abfahrt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:background="@color/colorLightGrey"
+                />
+            <TextView
+                android:id="@+id/TV_ActiveInfo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingLeft="5dp"
+                android:layout_alignEnd="@+id/TV_ActiveInfo1"
+                android:layout_alignStart="@+id/TV_ActiveInfo1"
+                android:layout_below="@+id/TV_ActiveInfo1"
+                android:textSize="12sp"
+                android:background="@color/colorLightGrey"
+                />
+            <TextView
+                android:id="@+id/TV_ActiveInfo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text=""
+                android:layout_alignEnd="@+id/TV_ActiveInfo1"
+                android:layout_alignStart="@+id/TV_ActiveInfo1"
+                android:layout_below="@+id/TV_ActiveInfo2"
+                android:textSize="12sp"
+                android:background="@color/colorLightGrey"
+                />
+            <TextView
+                android:id="@+id/TV_ActiveInfo4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:layout_alignEnd="@+id/TV_ActiveInfo1"
+                android:layout_alignStart="@+id/TV_ActiveInfo1"
+                android:layout_below="@+id/TV_ActiveInfo3"
+                android:textSize="12sp"
+                android:background="@color/colorLightGrey"
+                />
+            <ImageButton
+                android:id="@+id/BT_Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/TV_ActiveInfo4"
+                android:layout_alignEnd="@id/TV_ActiveInfo4"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="-5dp"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_delete_black_24dp" />
+            <TextView
+                android:id="@+id/TV_End"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/ankunft"
+                android:layout_alignEnd="@+id/TV_ActiveInfo1"
+                android:layout_alignStart="@+id/TV_ActiveInfo1"
+                android:layout_below="@+id/TV_ActiveInfo4"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/ET_EndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_End"
+                android:layout_alignStart="@+id/TV_End"
+                android:layout_below="@+id/TV_End"
+                android:ems="10"
+                android:hint="@string/datum_tt_mm_yyyy"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/ET_EndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_End"
+                android:layout_alignStart="@+id/TV_End"
+                android:layout_below="@+id/ET_EndDate"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="@string/zeit_hh_mm"
+                android:inputType="time" />
+
+            <AutoCompleteTextView
+                android:id="@+id/ACTV_EndAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/TV_End"
+                android:layout_alignStart="@id/TV_End"
+                android:layout_below="@id/ET_EndTime"
+                android:layout_marginRight="45dp"
+                android:inputType="textNoSuggestions"
+                android:hint="@string/addresse_ankunft"/>
+
+            <ImageButton
+                android:id="@+id/BT_EndHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ACTV_EndAddress"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignEnd="@id/TV_End"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_home_black_24dp" />
+            <ImageButton
+                android:id="@+id/BT_EndGPSLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ACTV_EndAddress"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignEnd="@id/TV_End"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_gps_black_24dp" />
+
+            <EditText
+                android:id="@+id/ET_EndLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_End"
+                android:layout_alignStart="@+id/TV_End"
+                android:layout_below="@+id/ACTV_EndAddress"
+                android:ems="10"
+                android:hint="@string/ort_ankunft"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/ET_EndKm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/TV_End"
+                android:layout_alignStart="@+id/TV_End"
+                android:layout_below="@+id/ET_EndLocation"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="@string/kilometerstand"
+                android:inputType="number" />
+
+            <AutoCompleteTextView
+                android:id="@+id/ACTV_EndNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/TV_End"
+                android:layout_alignStart="@id/TV_End"
+                android:layout_below="@id/ET_EndKm"
+                android:inputType="textNoSuggestions"
+                android:hint="@string/zweck"/>
+
+
+            <Switch
+                android:id="@+id/SW_EndCategory"
+                android:layout_width="229dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ACTV_EndNote"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:ems="10"
+                android:text="@string/beruflich"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/BT_EndTrip"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/SW_EndCategory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:text="@string/fahrt_beenden" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

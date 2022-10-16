@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swdev.wifi.at.fbapp">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_directions_car_white_48dp_2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_directions_car_white_48dp_2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainFBActivity"
+            android:label="@string/title_activity_main_fb"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewTripActivity"
+            android:label="@string/neuefahrt" />
+        <activity
+            android:name=".EditActiveLogActivity"
+            android:label="@string/aktivefahrt" />
+        <activity
+            android:name=".EditOpenLogActivity"
+            android:label="@string/offenefahrt" />
+        <activity
+            android:name=".ExportActivity"
+            android:label="@string/export" />
+        <activity android:name=".SettingsActivity" />
+
+        <service
+            android:name=".FetchAddressIntentService"
+            android:exported="false" />
+
+        <activity android:name=".db.ChartActivity"
+            android:label="@string/FarhtenGrafik"></activity>
+    </application>
+
+</manifest>
